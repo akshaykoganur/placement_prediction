@@ -1,0 +1,52 @@
+input {
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+form{
+    background-color: antiquewhite;
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.intro{
+    background-color: aqua;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+div.end{
+    background-color: aqua;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    margin-bottom: 5%;
+}
+
+div.by{
+    background-color: rgb(167, 220, 220);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+div.ans{
+    background-color: antiquewhite;
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.out{
+    background-color: antiquewhite;
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+}

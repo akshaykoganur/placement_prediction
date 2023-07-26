@@ -22,9 +22,9 @@ def predict():
     brr = np.asarray(arr, dtype=float)
     output = model.predict([brr])
     if(output==1):
-        out = 'Yes'
+        out = 'You have high chances of getting placed!!!'
     else:
-        out = 'No'
+        out = 'You have low chances of getting placed. All the best.'
     return render_template('out.html', output=out)
 
 if __name__ == "__main__":

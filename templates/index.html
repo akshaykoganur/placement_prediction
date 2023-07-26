@@ -1,37 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
     <title>Placement Prediction</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="intro">
-        <h1>Welcome to Placement Prediction App</h1>
-        
+      <h1>Welcome to Placement Prediction App</h1>
     </div>
     <form action="{{ url_for('predict')}}" name="form" method="GET">
-        <p>Enter Gender(Female=0, Male=1)</p>
-        <input type="number" name="gender" id="gender">
-        <br>
-        <p>Enter Stream(Civil=0, CSE=1, Electronics=2, EnTC=3, IT=4, Mechanical=5)</p>
-        <input type="number" name="stream" id="stream">
-        <br>
-        <p>Enter Previous Internships</p>
-        <input type="number" name="internship" id="internship">
-        <br>
-        <p>Enter CGPA</p>
-        <input type="number" name="cgpa" id="cgpa">
-        <br>
-        <p>Enter Backlogs</p>
-        <input type="text" name="backlogs" id="backlogs">
-        <br>
-        <button type="submit">Submit</button>
+        
+      <p>
+        Select Stream
+      </p required>
+      <select name="stream" id="stream" placeholder="Select" required>
+        <option value="" disabled selected>Please select</option>
+        <option value="0">Civil</option>
+        <option value="1">CSE</option>
+        <option value="2">Electronics</option>
+        <option value="3">EnTC</option>
+        <option value="5">Mechanical</option>
+      </select>
+      <br />
+      
+      <p>Enter CGPA</p>
+      <input type="number" step="0.01" name="cgpa" id="cgpa" min="0" pattern="^[0-9]\d*$" required/>
+      <br />
+
+      <p>Enter Previous Internships</p>
+      <input type="number" name="internship" id="internship" min="0" pattern="^[0-9]\d*$" required/>
+      <br />
+      
+      <p>Enter Backlogs</p>
+      <input type="number" name="backlogs" id="backlogs" min="0" pattern="^[0-9]\d*$" required//>
+      <br />
+      <p>Select Gender</p>
+      <select name="gender" id="gender" placeholder="Select" required>
+        <option value="" disabled selected>Please select</option>
+        <option value="0">Female</option>
+        <option value="1">Male</option>
+      </select>
+      <br />
+      
+      <button type="submit" value="submit" onclick="submitForm()">Submit</button>
+      
+      <script>
+        function submitForm(){
+            document.form.submit();
+            document.form.reset();
+        }
+    </script>
     </form>
     <div class="end">
-        <h2>This Website uses Decision Tree Model to predict results</h2>
+      <h2>This Website uses Decision Tree Model to predict results</h2>
     </div>
-</body>
+  </body>
 </html>

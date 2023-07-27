@@ -34,7 +34,7 @@ https://placement-prediction-18gm.onrender.com/
 Steps:
 1. Clone Project
 ```
-git clone https://github.com/Avi8010/Placement_Predictor.git
+git clone https://github.com/akshaykoganur/placement_prediction.git
 ```
 2. Installing dependancies
 ```
@@ -45,5 +45,5 @@ pip install -r requirements.txt
 python app.py
 ```
 ## Contributors
-- <a href="https://github.com/Avi8010">Avinash Maharnavar</a>
 - <a href="https://github.com/akshaykoganur">Akshay Koganur</a>
+- <a href="https://github.com/Avi8010">Avinash Maharnavar</a>

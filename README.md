@@ -7,7 +7,7 @@
 
 ## Features:
 - By leveraging the Decision Tree Classification technique, the model has been train to analyze the input parameteers and makes predictions ragarding the outcome.
-- The Machine Learing Model (Decision Tree Classification) achieved 97% precision and 86% accuracy.
+- The Machine Learing Model (Decision Tree Classification) achieved 94% precision and 88% accuracy.
 
 ## Tech Stack:
 - HTML, CSS, Python.
